@@ -4,7 +4,7 @@
           F[
             <input id="a" type="text" />,
             <input id="b" type="text" />,
-            <input id="c" type="text" />]
+            <input id="c" type="text" onkeypress="onEnter()"/>]
             <br />
             <br />
             <button type="button" id="myBtn" onclick="calculate()">Calculate</button>
@@ -17,7 +17,15 @@
             var inputB = document.getElementById("b");
             var inputC = document.getElementById("c");
             var spanResult = document.getElementById("t");
-
+            
+            function onEnter(event) {
+                if (event.which == 13 || event.keyCode == 13) {
+                    calculate();
+                    return false;
+                }
+                return true;
+            };
+            
             function f(x, y, z) {
               if (y == 1) {
                 return Math.ceil(Math.log(z) / Math.log(x + 1));

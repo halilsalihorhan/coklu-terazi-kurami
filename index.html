@@ -21,17 +21,11 @@
             inputC.addEventListener("keyup", function(event) {
                 event.preventDefault();
                 if (event.keyCode == 13) {
-                    alert('Yuppi');
+                    calculate();
                 }
             });
             
-            function onEnter(event) {
-                if (event.which == 13 || event.keyCode == 13) {
-                    calculate();
-                    return false;
-                }
-                return true;
-            };
+           
             
             function f(x, y, z) {
               if (y == 1) {

@@ -47,6 +47,9 @@
               var w = parseInt(inputB.value);
               var e = parseInt(inputC.value);
               var s = f(q, w, e);
+              if (s == "undefined"){
+                  s = 0;
+              }
               spanResult.innerHTML = f(q, w, e);
               spanM.innerHTML = inputA.value;
               spanN.innerHTML = inputB.value;

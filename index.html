@@ -4,7 +4,7 @@
           F[
             <input id="a" type="text" />,
             <input id="b" type="text" />,
-            <input id="c" type="text" onkeypress="onEnter()"/>]
+            <input id="c" type="text"/>]
             <br />
             <br />
             <button type="button" id="myBtn" onclick="calculate()">Calculate</button>
@@ -17,6 +17,13 @@
             var inputB = document.getElementById("b");
             var inputC = document.getElementById("c");
             var spanResult = document.getElementById("t");
+            
+            inputC.addEventListener("keyup", function(event) {
+                event.preventDefault();
+                if (event.keyCode == 13) {
+                    alert('Yuppi');
+                }
+            });
             
             function onEnter(event) {
                 if (event.which == 13 || event.keyCode == 13) {

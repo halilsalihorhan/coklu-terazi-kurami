@@ -9,7 +9,7 @@
             <br />
             <button type="button" id="myBtn" onclick="calculate()">Calculate</button>
             <br />
-            <br />Sonuç: <span id="t"></span>
+            <br /><span id="M"></span> kollu terazide <span id="N"></span> tanesi diğerlerinden farklı <span id="K"></span> nesne arasından farklı olan nesneler;<span id="t"></span> tartımda bulunması garanti edilebilir.
         </center>
         
         <script>
@@ -17,6 +17,9 @@
             var inputB = document.getElementById("b");
             var inputC = document.getElementById("c");
             var spanResult = document.getElementById("t");
+            var spanM = document.getElementById("M");
+            var spanN = document.getElementById("N");
+            var spanK = document.getElementById("K");
             
             inputC.addEventListener("keyup", function(event) {
                 event.preventDefault();
@@ -45,6 +48,9 @@
               var e = parseInt(inputC.value);
               var s = f(q, w, e);
               spanResult.innerHTML = f(q, w, e);
+              spanM.innerHTML = inputA.value;
+              spanN.innerHTML = inputB.value;
+              spanK.innerHTML = inputC.value;
             }
         </script>
         
